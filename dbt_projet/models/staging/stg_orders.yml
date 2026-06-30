@@ -4,9 +4,27 @@ models:
     - name: stg_orders
       columns:
         - name: order_id
+          tests: 
+            - not_null
+            - unique
         - name: customer_id
+          tests: 
+            - not_null
+            - relationships:
+              to: ref('stg_customers')
+              field: customer_id 
         - name: order_date
+          tests: 
+            - not_null
         - name: store_id
+          tests: 
+            - not_null
         - name: order_amount_taxes_excluded
+          tests: 
+            - not_null
         - name: order_tax
+          tests: 
+            - not_null
         - name: order_amount_taxes_included
+          tests: 
+            - not_null
