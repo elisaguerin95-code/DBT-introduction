@@ -1,0 +1,12 @@
+version: 2
+
+models:
+    - name: stg_orders
+      columns:
+        - name: order_id
+        - name: customer_id
+        - name: order_date
+        - name: store_id
+        - name: order_amount_taxes_excluded
+        - name: order_tax
+        - name: order_amount_taxes_included
